@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Main Loading Screen with Spinner</title>
+    <style style="background-color: black; color: white"">
+        /* Loading screen ka styling */
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Black background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff; /* White text color */
+            z-index: 9999;
+        }
+
+        /* Spinner styling */
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        /* Spinner animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+             
+}
+body{
+  
+}
+#contain5{
+      text-decoration: none;
+      position : absolute;
+      color: White;
+      left: 126px; 
+      top: 440px;
+      background-color: orange;
+      padding: 10px;
+      width: 70px;
+      height: 27px;
+      border-radius: 13px;    
+  }
+  .yes{
+      color: white;
+      text-decoration: none;
+   /* top: 600px;*/
+      left: 142px;
+      font-size: 20px
+      text-align: center;
+      }
+.Ntr{
+     font-size: 75px;
+     color: orange;
+     text-align: center;
+     position: relative ;
+     top: 344px;
+}
+.launch{
+     top: 180px;
+     color: white;
+     text-align: center 
+}
+.date{
+    top: 510px;
+    color: white;
+    text-align: center 
+}
+#contain6{
+      text-decoration: none;
+      position : absolute;
+      color: White;
+      left: 125px;
+      top: 442px;
+      background-color: #203080;
+      padding: 10px;
+      width: 70px;
+      height: 27px;
+      border-radius: 13px;  
+} 
+.fff{
+  text-align: center ;
+  position: relative;
+  top: 300px;
+  
+}
+
+body{
+   background: url('bgpic.png');
+   background-size: 400px;
+   background-repeat: no-repeat;
+   
+   
+   
+ 
+}
+#done{
+   font-size: 24px;
+   position: relative;
+   left: -1px;
+   top: -1px;
+   color: Gold 
+   
+}
+.ggg{
+  text-align: center ;
+  position: relative;
+  top: -160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  animation: background-glow 2s infinite;
+}
+
+@keyframes background-glow {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+
+#mainContent {
+  animation: fadeInUp 0.5s;
+  animation-delay: 0s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ggg {
+  animation: fadeInDown 0.5s;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#done {
+  animation: zoomIn 0.3s;
+  animation-delay: 0.5s;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+#sunpng{
+  width: 55px;
+  position: absolute;
+  top: 23px;
+  left: 275px
+}
+
+#starpng{
+  width: 35px;
+  position: absolute;
+  top: 165px;
+  left: -15px
+}
+
+
+
+  
+
+    </style>
+</head>
+<body>
+<!-- <img class="bgpic" src="bgpic.jpg"/> -->
+
+<img id="sunpng" src="sun.png"/>
+
+<img id="starpng" src="star.png"/>
+
+    <!-- Loading screen -->
+    <div id="loadingScreen">
+        <div class="spinner"></div>
+        <div>Loading...</div>
+    </div>
+
+    <!-- Main content -->
+    <div id="mainContent" style="display: none;">
+   
+
+<h1 class="Ntr">$NSTR</h1>
+<div class="fff">
+<h3 class="launch">Listing Date</h3>
+<h2 class="date">December, 2024</h2>
+</div>
+
+
+  <div class="ggg">
+  <a href="home.html"><h4 id="contain5"><h4 id="contain6"><b id="done">Done</b></h4></a>
+  </a></div>
+  
+  
+   <!--<a class="yes" href="index.html"><h4 id="contain"><b>Done!</b>--> 
+ 
+
+
+    </div>
+    <script>
+        
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("loadingScreen").style.display = "none";
+                document.getElementById("mainContent").style.display = "block";
+            }, 4000);
+        };
+    </script>
+
+</body>
+</html>
